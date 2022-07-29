@@ -1,0 +1,670 @@
+@charset "UTF-8";
+
+*{margin: 0; padding: 0;}
+li {list-style: none;}
+a {text-decoration: none; color: #222;}
+body {
+	font-family: 'helveticaCE','고딕'; font-weight: 500; font-size: 14px; color: #222;
+	box-sizing: border-box;
+}
+span.skip {display: none;}
+hr { width: 96%; margin: 0 auto; }
+
+/*헤더 상단 어사이드*/
+aside {
+	width: 100%;
+	height: 30px;
+	border-bottom: 1px solid #222;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 5;
+	background-color: #fff;
+}
+aside ul {
+	float: right;
+	margin-right: 5%;
+}
+aside ul li {
+	float: left;
+	text-align: left;
+	margin-right: 20px;
+}
+aside ul li span {
+	display: block;
+	overflow: hidden;
+}
+aside ul li:nth-child(1) span {
+	width: 12.5px;
+}
+aside ul li:nth-child(2) span {
+	width: 9.5px;
+}
+aside ul li:nth-child(3) span {
+	width: 9px;
+}
+aside ul li a {
+	display: block;
+	width: 70px;
+	color: #222;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 30px;
+	letter-spacing: .5px;
+}
+
+/*헤더 네비 공통*/
+header{
+	width: 100%;
+	height: 880px;
+	position: relative;
+	margin-top: 30px;
+	margin-bottom: 10px;
+	overflow: hidden;
+}
+header nav {
+	width: 27%;
+	position: absolute;
+	z-index: 2;
+}
+header nav li a {
+	display: block;
+	font-size: 12px;
+	line-height: 150%;
+	margin: 2px;
+	color: #222;
+}
+header nav li a.fontw{
+	font-weight: 700;
+}
+header nav li a:hover {
+	text-decoration: underline;
+}
+header nav ul.at2nd {
+	padding: 10px 0;
+}
+header nav ul.at3rd {
+	padding: 10px 0;
+	display: none;
+}
+header nav ul.at4th {
+	width: 25%;
+	text-align: right;
+	margin: 10px 0 10px 75%;
+	padding: 3px 0;
+	border-top: 1px solid #222;
+	border-bottom: 1px solid #222;
+	display: none;
+}
+nav.leftmenu ul.at1st>li:nth-child(1)>ul.at2nd>li:nth-child(3)>ul.at3rd {
+	display: block;
+}
+nav.leftmenu ul.at1st>li:nth-child(2)>ul.at2nd{
+	display: none;
+}
+nav.leftmenu ul.at1st>li:nth-child(3)>ul.at2nd{
+	display: none;
+}
+header nav.rightmenu ul.at2nd {
+	display: none;
+}
+/*좌측 헤더*/
+header nav.leftmenu {
+	top: 6%;
+	left: 0;
+}
+
+/*좌측 헤더 - 로고*/
+header h1{
+	width: 17%;
+	text-align: right;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+header a.logo{
+	width: 100%;
+	height: 50px;
+	display: block;
+	margin-top: 10px;
+	background-image: url('../img/logo.svg');
+	background-size:250px;
+	background-repeat: no-repeat;
+	background-position: 100% 70%;
+}
+
+/*좌측 헤더 네비*/
+header nav.leftmenu ul.at1st {
+	width: 100%;
+	text-align: right;
+	padding-top: 10px;
+}
+header nav.leftmenu ul.at1st li {
+	padding-right: 5px;
+}
+
+header div.blank {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+
+/*우측 헤더*/
+header nav.rightmenu {
+	right: 0;
+	bottom: 1%;
+}
+header nav.rightmenu ul.at1st {
+	width: 35%;
+	text-align: left;
+	padding-top: 10px;
+}
+header nav.rightmenu ul.at1st li {
+	padding-left: 5px;
+}
+
+
+
+/*어사이드 모달 공통*/
+header div.back {
+	background-color: rgba(0, 0, 0, 0.5);
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 6;
+}
+header div.back div.modal {
+	background-color: #fff;
+	width: 25%;
+	height: 100%;
+	padding: 30px 20px;
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: 7;
+	font-size: 12px;
+	margin-right: -28%;
+}
+
+/*마이페이지-로그인*/
+header div.back div.modal.mypage span {
+	font-size: 10px;
+}
+header div.back div.modal.mypage label {
+	display: block;
+	margin-top: 15px;
+}
+header div.back div.modal.mypage input#email {
+	width: 100%;
+	height: 24px;
+	padding: 4px;
+	background-color: #fff;
+	border: 0;
+	border-bottom: 1px solid #222;
+}
+header div.back div.modal.mypage input#saveID {
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	margin-top: 10px;
+}
+header div.back div.modal.mypage span#password {
+	display: inline-block;
+	width: 95%;
+	margin-top: -5px;
+	margin-bottom: 15px;
+}
+header div.back div.modal.mypage span#password em {
+	text-align: right;
+}
+header div.back div.modal.mypage button.btn {
+	display: block;
+	width: 100%;
+	padding: 5px;
+	box-sizing: border-box;
+	background-color: #222;
+	color: #fff;
+	border: 0;
+	cursor: pointer;
+	margin-bottom: 15px;
+}
+header div.back div.modal.mypage h4 {
+	font-size: 14px;
+	padding-top: 10px;
+	padding-bottom: 5px;
+}
+header div.back div.modal.mypage ul {
+	margin-bottom: 10px;
+}
+header div.back div.modal.mypage p.close{
+	vertical-align: bottom;
+	cursor: pointer;
+}
+header div.back div.modal.mypage p.close i.fa-solid{
+	font-size: 12px;
+	margin-left: 3px;
+}
+
+/*장바구니*/
+header div.back div.modal.cart p {
+	padding: 10px 0;
+}
+header div.back div.modal.cart span {
+	display: block;
+}
+header div.back div.modal.cart span:nth-child(4) {
+	font-size: 10px;
+	padding: 10px 0;
+}
+header div.back div.modal.cart button {
+	width: 100%;
+	font-size: 12px;
+	height: 24px;
+	background-color: #fff;
+	border: 1px solid #222;
+	cursor: pointer;
+}
+
+
+/*고객 서비스*/
+header div.black {
+	display: none;
+}
+header div.back div.modal.service {
+	position: fixed;
+	top: 0;
+	right: 0;
+}
+header div.back div.modal.service hr {
+	width: 100%;
+}
+header div.back div.modal.service hr.hrnum01 {
+	margin-top: 10px;
+}
+header div.back div.modal.service hr.hrnum02 {
+	margin-bottom: 10px;
+}
+header div.back div.modal.service>p {
+	font-size: 12px;
+	padding: 10px 0 30px;
+}
+header div.back div.modal.service>p.close {
+	position: absolute;
+	top: 30px;
+	right: 20px;
+	padding: 0;
+	cursor: pointer;
+}
+header div.back div.modal.service>p.close i {
+	margin-left: 2px;
+}
+header div.back div.modal div.serwrap {
+	width: 50%;
+	height: 160px;
+	padding: 10px 18px 10px 0;
+	box-sizing: border-box;
+	margin-bottom: 20px;
+	float: left;
+	position: relative;
+}
+header div.back div.modal div.serwrap h4 {
+	font-size: 14px;
+	padding-bottom: 5px;
+}
+header div.back div.modal div.serwrap span {
+	display: block;
+	font-size: 12px;
+	line-height: 1.6;
+	padding: 3px 0;
+}
+header div.back div.modal div.serwrap span.time {
+	position: absolute;
+	bottom: 28px;
+}
+header div.back div.modal div.serwrap button.servicebtn {
+	width: 94%;
+	height: 24px;
+	background-color: #fff;
+	border: 1px solid #222;
+	position: absolute;
+	bottom: 3px;
+	left: 0;
+	font-size: 12px;
+}
+div.reserve, div.info {
+	padding: 10px 0 10px;
+}
+div.reserve span{
+	font-size: 12px;
+}
+div.reserve h4, div.faq01 h4, div.faq02 h4 {
+	font-size: 14px;
+	padding-bottom: 10px;
+}
+div.info {
+	font-size: 10px;
+	line-height: 1.6;
+}
+div.info a {
+	text-decoration: underline;
+}
+header div.back div.modal div.faq01 {
+	margin-bottom: 10px;
+}
+header div.back div.modal div.faq01 li a{
+	display: block;
+	color: #222;
+	font-size: 12px;
+	line-height: 1.6;
+}
+header div.back div.modal div.faq01 ul li a:hover {
+	text-decoration: underline;
+}
+header div.back div.modal div.faq02 div.faqwrap {
+	display: flex;
+	flex-flow: row nowrap;
+}
+header div.back div.modal div.faq02 ul {
+	width: 33.333%;
+}
+header div.back div.modal div.faq02 ul li a {
+	color: #222;
+	display: block;
+	line-height: 1.6;
+}
+header div.back div.modal div.faq02 ul li a:hover {
+	text-decoration: underline;
+}
+
+/*메인 신제품*/
+section.mainindex {
+	width: 100%;
+	height: 100%;
+	padding-top: 27px;
+}
+section.mainindex ul.mainNew {
+	width: 65%;
+	height: 99%;
+	margin: 0px auto;
+	opacity: 100%;
+	animation: ani .7s ;
+	animation-iteration-count: 1
+}
+@keyframes ani {
+	0%{opacity: 50%; margin-top: 10px}
+	100%{opacity: 100%; margin-top: 0px}
+}
+section.mainindex ul.mainNew.open {
+	opacity: 100%;
+}
+section.mainindex ul.mainNew li {
+	width: 24.25%;
+	margin-right: 1%;
+	height: 49%;
+	margin-bottom: 1%;
+	float: left;
+	position: relative;
+	z-index: 3;
+}
+section.mainindex ul.mainNew li:nth-child(4n) {
+	margin-right: 0;
+}
+section.mainindex ul.mainNew li a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-color: #f5f5f7;
+}
+section.mainindex ul.mainNew li a span {
+	font-size: 12px;
+	line-height: 1.8;
+	width: 100%;
+	position: absolute;
+	bottom: 3px;
+	left: 10px;
+	display: none;
+}
+section.mainindex ul.mainNew li a:hover span {
+	display: block;
+}
+section.mainindex ul.mainNew li:nth-child(1) a {
+	background-image: url('../img/woaman-22summer/re/re_summer01-item01-a.jpg');
+	background-position: 0 30%;
+}
+section.mainindex ul.mainNew li:nth-child(1) a:hover {
+	background-image: url('../img/woaman-22summer/re/re_summer01-item01-b.jpg');
+	background-position: 0 30%;
+}
+section.mainindex ul.mainNew li:nth-child(2) a {
+	background-image: url('../img/woaman-22summer/re/re_summer05-item02-a.jpg');
+}
+section.mainindex ul.mainNew li:nth-child(2) a:hover {
+	background-image: url('../img/woaman-22summer/re/re_summer05-item02-b.jpg');
+}
+section.mainindex ul.mainNew li:nth-child(3) a {
+	background-image: url('../img/woaman-22summer/re/re_summer01-item02-a.jpg');
+	background-position: 0 50%;
+}
+section.mainindex ul.mainNew li:nth-child(3) a:hover {
+	background-image: url('../img/woaman-22summer/re/re_summer01-item02-b.jpg');
+	background-position: 0 50%;
+}
+section.mainindex ul.mainNew li:nth-child(4) a {
+	background-image: url('../img/woaman-22summer/re/re_summer01-item03-a.jpg');
+}
+section.mainindex ul.mainNew li:nth-child(4) a:hover {
+	background-image: url('../img/woaman-22summer/re/re_summer01-item03-b.jpg');
+}
+section.mainindex ul.mainNew li:nth-child(5) a {
+	background-image: url('../img/woaman-22summer/re/re_summer02-item01-a.jpg');
+	background-position: 0 30%;
+}
+section.mainindex ul.mainNew li:nth-child(5) a:hover {
+	background-image: url('../img/woaman-22summer/re/re_summer02-item01-b.jpg');
+	background-position: 0 30%;
+}
+section.mainindex ul.mainNew li:nth-child(6) a {
+	background-image: url('../img/woaman-22summer/re/re_summer02-item02-a.jpg');
+	background-position: 0 70%;
+}
+section.mainindex ul.mainNew li:nth-child(6) a:hover {
+	background-image: url('../img/woaman-22summer/re/re_summer02-item02-b.jpg');
+	background-position: 0 70%;
+}
+section.mainindex ul.mainNew li:nth-child(7) a {
+	background-image: url('../img/woaman-22summer/re/re_summer02-item04-a.jpg');
+	background-position: 0 70%;
+}
+section.mainindex ul.mainNew li:nth-child(7) a:hover {
+	background-image: url('../img/woaman-22summer/re/re_summer02-item04-b.jpg');
+	background-position: 0 70%;
+}
+section.mainindex ul.mainNew li:nth-child(8) a {
+	background-image: url('../img/woaman-22summer/re/re_summer03-item01-a.jpg');
+}
+section.mainindex ul.mainNew li:nth-child(8) a:hover {
+	background-image: url('../img/woaman-22summer/re/re_summer03-item01-b.jpg');
+}
+
+div.more {
+	width: 65%;
+	margin: 0 auto 50px;
+}
+div.more p {
+	height: 35px;
+	padding: 5px;
+	font-size: 12px;
+	line-height: 25px;
+	text-align: center;
+	border: 1px solid #222;
+	box-sizing: border-box;
+}
+div.more:hover {
+	border: none;
+	background-color: #222;
+	color: #fff;
+}
+div.more.none {
+	display: none;
+}
+
+
+ul.mainNew.second {
+	width: 65%;
+	height: 845px;
+	margin: 0 auto;
+	display: none;
+}
+ul.mainNew.second li {
+	width: 24.25%;
+	margin-right: 1%;
+	height: 49.3%;
+	margin-bottom: 1%;
+	float: left;
+	position: relative;
+	z-index: 3;
+}
+ul.mainNew.second li:nth-child(4n) {
+	margin-right: 0;
+}
+ul.mainNew.second li a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-color: #f5f5f7;
+}
+ul.mainNew.second li a span {
+	font-size: 12px;
+	line-height: 1.8;
+	width: 100%;
+	position: absolute;
+	bottom: 3px;
+	left: 10px;
+	display: none;
+}
+ul.mainNew.second li a:hover span {
+	display: block;
+}
+ul.mainNew.second li:nth-child(1) a {
+	background-image: url('../img/woaman-22summer/re/re_summer04-item01-a.jpg');
+	background-position: 0 30%;
+}
+ul.mainNew .secondli:nth-child(1) a:hover {
+	background-image: url('../img/woaman-22summer/re/re_summer04-item01-b.jpg');
+	background-position: 0 30%;
+}
+ul.mainNew.second li:nth-child(2) a {
+	background-image: url('../img/woaman-22summer/re/re_summer03-item02-a.jpg');
+}
+ul.mainNew.second li:nth-child(2) a:hover {
+	background-image: url('../img/woaman-22summer/re/re_summer03-item02-b.jpg');
+}
+ul.mainNew.second li:nth-child(3) a {
+	background-image: url('../img/woaman-22summer/re/re_summer03-item03-a.jpg');
+	background-position: 0 50%;
+}
+ul.mainNew.second li:nth-child(3) a:hover {
+	background-image: url('../img/woaman-22summer/re/re_summer03-item03-b.jpg');
+	background-position: 0 50%;
+}
+ul.mainNew.second li:nth-child(4) a {
+	background-image: url('../img/woaman-22summer/re/re_summer03-item04-a.jpg');
+}
+ul.mainNew.second li:nth-child(4) a:hover {
+	background-image: url('../img/woaman-22summer/re/re_summer03-item04-b.jpg');
+}
+ul.mainNew.second li:nth-child(5) a {
+	background-image: url('../img/woaman-22summer/re/re_summer04-item04-a.jpg');
+	background-position: 0 30%;
+}
+ul.mainNew.second li:nth-child(5) a:hover {
+	background-image: url('../img/woaman-22summer/re/re_summer04-item04-b.jpg');
+	background-position: 0 30%;
+}
+ul.mainNew.second li:nth-child(6) a {
+	background-image: url('../img/woaman-22summer/re/re_summer05-item01-a.jpg');
+	background-position: 0 70%;
+}
+ul.mainNew.second li:nth-child(6) a:hover {
+	background-image: url('../img/woaman-22summer/re/re_summer05-item01-b.jpg');
+	background-position: 0 70%;
+}
+ul.mainNew.second li:nth-child(7) a {
+	background-image: url('../img/woaman-22summer/re/re_summer05-item03-a.jpg');
+	background-position: 0 70%;
+}
+ul.mainNew.second li:nth-child(7) a:hover {
+	background-image: url('../img/woaman-22summer/re/re_summer05-item03-b.jpg');
+	background-position: 0 70%;
+}
+ul.mainNew.second li:nth-child(8) a {
+	background-image: url('../img/woaman-22summer/re/re_summer06-item02-a.jpg');
+}
+ul.mainNew.second li:nth-child(8) a:hover {
+	background-image: url('../img/woaman-22summer/re/re_summer06-item02-b.jpg');
+}
+
+
+/*푸터*/
+footer {
+	width: 90%;
+	height: 180px;
+	margin: 0 auto;
+	display: flex;
+	flex-flow: row nowrap;
+}
+footer div.footermenu {
+	width: 61%;
+	margin-left: 4%;
+	display: flex;
+	flex-flow: row nowrap;
+	padding-top: 20px;
+}
+footer div.newsletter {
+	width: 31%;
+	margin-right: 4%;
+}
+footer div.newsletter a {
+	display: block;
+	padding-top: 15px;
+	color: #222;
+	font-size: 12px;
+	line-height: 180%;
+	text-align: right;
+}
+footer div.newsletter a:hover {
+	text-decoration: underline;
+}
+footer div.footermenu div.column {
+	width: 25%;
+}
+footer div.footermenu div.column>ul {
+	width: 100%;
+}
+footer div.footermenu div.column>ul:nth-child(2) {
+	margin-top: 20px;
+}
+footer ul {
+	width: 25%;
+}
+footer ul li {width: 100%;}
+footer ul li a{
+	display: block;
+	width: 100%;
+	color: #222;
+	font-size: 12px;
+	line-height: 180%;
+}
+footer ul li:hover a {
+	text-decoration: underline;
+}
